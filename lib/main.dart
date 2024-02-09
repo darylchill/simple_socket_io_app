@@ -22,12 +22,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Simple Socket IO Chat app',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flutter Simple Socket IO Chat app'),
     );
   }
 }
@@ -138,12 +138,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
             ),
-            TextFormField(
-              controller: txtMessageController,
-              onFieldSubmitted: (value){
-                txtMessageController.text = value;
-              },
-            ),
+            Padding(
+              padding:const EdgeInsets.symmetric(vertical: 0,horizontal: 50),
+              child:TextFormField(
+                controller: txtMessageController,
+                onFieldSubmitted: (value){
+                  txtMessageController.text = value;
+                },
+              ),
+            )
           ],
         ),
       ),

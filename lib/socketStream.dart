@@ -20,7 +20,7 @@ class StreamSocket{
       }
     });
 
-    //When an event recieved from server, data is added to the stream
+    //When an event received from server, data is added to the stream
     socket.on('chat message', (data) {
       addResponse(data);
       if (kDebugMode) {
